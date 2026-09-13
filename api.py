@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
-from rag import ask_rag
+from retrievel_pipeline import ask_rag
 
 
 app = FastAPI()
@@ -31,3 +31,5 @@ def ask_question(request: QuestionRequest):
     return {
         "answer": answer
     }
+    
+    
